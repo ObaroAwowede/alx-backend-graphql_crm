@@ -1,5 +1,5 @@
-import graphene
-class Query(graphene.ObjectType):
+import graphene, CRMQuery
+class Query(CRMQuery, graphene.ObjectType):
     hello = graphene.String(description="Hello field")
     
     def resolve_hello(root,info):
